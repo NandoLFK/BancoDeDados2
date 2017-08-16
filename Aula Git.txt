@@ -1,0 +1,594 @@
+#saber qual diretorio eu estou
+pwd
+
+# criar diretorio
+mkdir **nome
+
+#criar repositorio
+git init
+
+#listar aquivos ocultos
+ls -a
+
+#avan�ar em um diretorio
+cd **nome d pasta
+
+#retornar diretorio
+cd ..
+
+# criar arquivo
+> **arquivo
+
+#listar em forma de lista
+ls -l
+
+
+*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Luiz@Nando MINGW64 ~
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+Luiz@Nando MINGW64 ~
+$ cd AulaGit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit -m "cria arquivo"
+[master (root-commit) 8ad2f1c] cria arquivo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls -a
+./  ../  .git/  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ > chamda.txt
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        chamda.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git add .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit -m "adiciona o arquivo .gititnore"
+[master 298797a] adiciona o arquivo .gititnore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+chamada.txt  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git coomt index.html -m "altera o conteudo do arquivi"
+git: 'coomt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commt index.html -m "altera o conteudo do arquivo"
+git: 'commt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit index.html -m "altera o conteudo do arquivo"
+[master 01a04f7] altera o conteudo do arquivo
+ 1 file changed, 1 insertion(+)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+chamada.txt  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git checkout v1
+Switched to branch 'v1'
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git branch
+  master
+* v1
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ > style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add style
+fatal: pathspec 'style' did not match any files
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add "style"
+fatal: pathspec 'style' did not match any files
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add "style.css"
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git commit -m "adiciona aqruivo tipo syle.css"
+[v1 206a4f6] adiciona aqruivo tipo syle.css
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git status
+On branch v1
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git commit index.html -m " adiciona uma nova linha"
+[v1 630cc29]  adiciona uma nova linha
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ status
+bash: status: command not found
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git status
+On branch v1
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ ls
+chamada.txt  index.html  style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ gitignore chamada
+bash: gitignore: command not found
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git checkout master
+Switched to branch 'master'
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit index.html -m "adiciona terceira linha"
+[master 0e0d302] adiciona terceira linha
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git checkout v1
+Switched to branch 'v1'
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git branch
+  master
+* v1
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git checkout master
+Switched to branch 'master'
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git merge v1
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ ^C
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$
+
+2
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+Luiz@Nando MINGW64 ~
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+Luiz@Nando MINGW64 ~
+$ cd AulaGit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit -m "cria arquivo"
+[master (root-commit) 8ad2f1c] cria arquivo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls -a
+./  ../  .git/  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ > chamda.txt
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ notepad .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        chamda.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git add .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit -m "adiciona o arquivo .gititnore"
+[master 298797a] adiciona o arquivo .gititnore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+chamada.txt  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git coomt index.html -m "altera o conteudo do arquivi"
+git: 'coomt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commt index.html -m "altera o conteudo do arquivo"
+git: 'commt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit index.html -m "altera o conteudo do arquivo"
+[master 01a04f7] altera o conteudo do arquivo
+ 1 file changed, 1 insertion(+)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+chamada.txt  index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git checkout v1
+Switched to branch 'v1'
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git branch
+  master
+* v1
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ > style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add style
+fatal: pathspec 'style' did not match any files
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add "style"
+fatal: pathspec 'style' did not match any files
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git add "style.css"
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git commit -m "adiciona aqruivo tipo syle.css"
+[v1 206a4f6] adiciona aqruivo tipo syle.css
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git status
+On branch v1
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git commit index.html -m " adiciona uma nova linha"
+[v1 630cc29]  adiciona uma nova linha
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ status
+bash: status: command not found
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git status
+On branch v1
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ ls
+chamada.txt  index.html  style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ gitignore chamada
+bash: gitignore: command not found
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git checkout master
+Switched to branch 'master'
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git commit index.html -m "adiciona terceira linha"
+[master 0e0d302] adiciona terceira linha
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git checkout v1
+Switched to branch 'v1'
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git branch
+  master
+* v1
+
+Luiz@Nando MINGW64 ~/AulaGit (v1)
+$ git checkout master
+Switched to branch 'master'
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git branch
+* master
+  v1
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git merge v1
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ ^C
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ notepad index.html
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+
+        new file:   style.css
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   index.html
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ git add --all
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   index.html
+        new file:   style.css
+
+
+Luiz@Nando MINGW64 ~/AulaGit (master|MERGING)
+$ git commit -am "faz merge do branch v1 para o master"
+[master 1d4f67d] faz merge do branch v1 para o master
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls
+chamada.txt  index.html  style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$ ls -a
+./  ../  .git/  .gitignore  chamada.txt  index.html  style.css
+
+Luiz@Nando MINGW64 ~/AulaGit (master)
+$
